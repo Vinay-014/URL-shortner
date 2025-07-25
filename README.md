@@ -3,10 +3,6 @@
 ## Overview
 Built a simple URL shortening service similar to bit.ly or tinyurl. This work showcases my ability to design and implement a small but complete feature from scratch.
 
-### Prerequisites
-- Python 3.8+ installed
-- 3 hours of uninterrupted time
-
 ### Setup
 ```bash
 # Clone/download this repository
@@ -29,7 +25,7 @@ python -m flask --app app.main run
 - One example test
 - Empty files for your implementation
 
-### Core Requirements
+### ToDo
 
 1. **Shorten URL Endpoint**
    - `POST /api/shorten`
@@ -65,13 +61,13 @@ curl -X POST http://localhost:5000/api/shorten \
   -H "Content-Type: application/json" \
   -d '{"url": "https://www.example.com/very/long/url"}'
 
-# Response: {"short_code": "abc123", "short_url": "http://localhost:5000/abc123"}
+# Response: {"short_code": "$shortcode", "short_url": "http://localhost:5000/$shortcode"}
 
 # Use the short URL (this redirects)
-curl -L http://localhost:5000/abc123
+curl -L http://localhost:5000/$shortcode
 
 # Get analytics
-curl http://localhost:5000/api/stats/abc123
+curl http://localhost:5000/api/stats/$shortcode
 
 # Response: {"url": "https://www.example.com/very/long/url", "clicks": 5, "created_at": "2024-01-01T10:00:00"}
 ```
