@@ -30,7 +30,7 @@ python -m flask --app app.main run
 1. **Shorten URL Endpoint**
    - `POST /api/shorten`
    - Accept a long URL in the request body
-   - Return a short code (e.g., "abc123")
+   - Return a short code which will be in alphanumeric
    - Store the mapping for later retrieval
 
 2. **Redirect Endpoint**
